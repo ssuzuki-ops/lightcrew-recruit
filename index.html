@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LightCrew 採用サイト｜君たちが動かすのは、パソコンじゃない。世界だ。</title>
+<meta name="description" content="ライトクルー株式会社の採用サイト。浅草・雷門生まれのITソリューション企業。技術による永遠の社会貢献。新卒・中途のエンジニアを募集中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#CE0E2D;        /* 雷門クリムゾン（ロゴ） */
+    --red-dk:#A50B23;
+    --navy:#16143B;       /* ディープネイビー（ロゴ） */
+    --navy-2:#241F52;
+    --blue:#1B3FA6;       /* ブルー（ロゴ） */
+    --gold:#E89B3C;       /* 提灯のあかり（温かみ） */
+    --gold-soft:#F6D9A8;
+    --cream:#FCF6EE;      /* 温かいクリーム背景 */
+    --cream-2:#F6ECDD;
+    --ink:#2A2742;
+    --ink-soft:#6B6580;
+    --white:#ffffff;
+    --shadow:0 18px 50px -22px rgba(22,20,59,.35);
+    --shadow-sm:0 8px 26px -16px rgba(22,20,59,.4);
+    --radius:22px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{
+    font-family:"Noto Sans JP",system-ui,sans-serif;
+    color:var(--ink);background:var(--cream);
+    line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  .en{font-family:"Outfit",sans-serif;letter-spacing:.04em}
+  .mincho{font-family:"Shippori Mincho",serif}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{position:relative}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(252,246,238,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(22,20,59,.07);transition:.3s;
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800}
+  .logo .mark{
+    width:34px;height:34px;border-radius:10px;flex:none;
+    background:linear-gradient(135deg,var(--red),var(--red-dk));
+    display:grid;place-items:center;color:#fff;font-family:"Outfit";font-weight:800;
+    box-shadow:0 6px 16px -6px rgba(206,14,45,.7);font-size:18px;
+  }
+  .logo b{font-size:21px;font-family:"Outfit";color:var(--navy);letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:var(--ink-soft);font-weight:500;letter-spacing:.18em;margin-top:-3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-size:13px;font-weight:700;color:var(--navy);transition:.2s;position:relative}
+  .nav-links a .s{display:block;font-size:9px;color:var(--red);font-family:"Outfit";font-weight:700;letter-spacing:.12em}
+  .nav-links a:hover{color:var(--red)}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:14px;
+    padding:13px 26px;border-radius:999px;transition:.25s;cursor:pointer;border:none;
+  }
+  .btn-entry{
+    background:linear-gradient(135deg,var(--red),var(--red-dk));color:#fff;
+    box-shadow:0 12px 26px -10px rgba(206,14,45,.75);
+  }
+  .btn-entry:hover{transform:translateY(-2px);box-shadow:0 18px 32px -10px rgba(206,14,45,.85)}
+  .btn-entry .ar{transition:.25s}
+  .btn-entry:hover .ar{transform:translateX(4px)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+  .nav-toggle span{width:24px;height:2px;background:var(--navy);border-radius:2px;transition:.3s}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;
+    background:
+      radial-gradient(1100px 600px at 78% -8%, rgba(232,155,60,.20), transparent 60%),
+      radial-gradient(900px 620px at 8% 110%, rgba(27,63,166,.12), transparent 60%),
+      linear-gradient(180deg,#FFFBF5,#FCF6EE);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
+  .hero .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--red);
+    font-weight:800;font-size:12.5px;padding:8px 16px;border-radius:999px;
+    box-shadow:var(--shadow-sm);margin-bottom:26px;letter-spacing:.04em;
+  }
+  .hero .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .hero h1{
+    font-family:"Shippori Mincho",serif;font-weight:800;color:var(--navy);
+    font-size:clamp(33px,5vw,58px);line-height:1.32;letter-spacing:.01em;margin-bottom:24px;
+  }
+  .hero h1 .hl{color:var(--red);position:relative;white-space:nowrap}
+  .hero h1 .hl::after{
+    content:"";position:absolute;left:0;right:0;bottom:6px;height:11px;
+    background:var(--gold-soft);z-index:-1;border-radius:3px;
+  }
+  .hero p.lead{font-size:16px;color:var(--ink-soft);max-width:480px;margin-bottom:34px;font-weight:500}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-ghost{background:#fff;color:var(--navy);box-shadow:var(--shadow-sm)}
+  .btn-ghost:hover{transform:translateY(-2px);color:var(--red)}
+  .hero-visual{position:relative}
+  .lantern-card{
+    background:#fff;border-radius:30px;padding:34px;box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .lantern-card::before{
+    content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;
+    background:radial-gradient(circle,rgba(232,155,60,.35),transparent 70%);
+  }
+  .scene{position:relative;height:280px}
+  /* floating chips */
+  .float-chip{
+    position:absolute;background:#fff;border-radius:14px;padding:10px 15px;
+    box-shadow:var(--shadow-sm);font-weight:700;font-size:13px;display:flex;align-items:center;gap:9px;
+    animation:float 4s ease-in-out infinite;
+  }
+  .float-chip i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:15px;flex:none}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+  /* ---------- Section heading ---------- */
+  .sec{padding:96px 0}
+  .sec-head{text-align:center;margin-bottom:54px}
+  .sec-head .en-l{
+    display:block;font-family:"Outfit";font-weight:800;color:var(--red);
+    font-size:13px;letter-spacing:.28em;margin-bottom:10px;
+  }
+  .sec-head h2{font-family:"Shippori Mincho",serif;font-weight:800;color:var(--navy);font-size:clamp(26px,3.6vw,38px);line-height:1.4}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:15px;font-weight:500}
+
+  /* ---------- Message ---------- */
+  .message{background:linear-gradient(180deg,#FCF6EE,#FBF1E4)}
+  .msg-box{
+    max-width:820px;margin:0 auto;background:#fff;border-radius:var(--radius);
+    padding:56px;box-shadow:var(--shadow);position:relative;
+    border-top:6px solid var(--red);
+  }
+  .msg-box .q{font-family:"Shippori Mincho",serif;font-size:64px;color:var(--gold-soft);line-height:.6;position:absolute;top:34px;left:34px}
+  .msg-box h3{font-family:"Shippori Mincho",serif;font-size:clamp(21px,2.6vw,28px);color:var(--navy);line-height:1.7;margin-bottom:26px;position:relative;z-index:1}
+  .msg-box p{color:#4a4660;font-size:15.5px;margin-bottom:16px}
+  .msg-sign{margin-top:28px;display:flex;align-items:center;gap:14px;border-top:1px dashed #e4d9c8;padding-top:24px}
+  .msg-sign .av{width:52px;height:52px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--navy),var(--navy-2));display:grid;place-items:center}
+  .msg-sign b{color:var(--navy);font-size:15px}
+  .msg-sign span{font-size:12.5px;color:var(--ink-soft)}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .about-txt h3{font-family:"Shippori Mincho",serif;font-size:26px;color:var(--navy);line-height:1.55;margin-bottom:20px}
+  .about-txt h3 em{color:var(--red);font-style:normal}
+  .about-txt p{color:#4a4660;font-size:15px;margin-bottom:16px}
+  .fact-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fact{background:#fff;border-radius:18px;padding:22px;box-shadow:var(--shadow-sm);border-left:4px solid var(--gold)}
+  .fact .k{font-size:12px;color:var(--ink-soft);font-weight:700;letter-spacing:.04em}
+  .fact .v{font-family:"Shippori Mincho",serif;font-size:19px;color:var(--navy);font-weight:700;margin-top:6px;line-height:1.4}
+  .fact:nth-child(2){border-left-color:var(--red)}
+  .fact:nth-child(3){border-left-color:var(--blue)}
+  .fact:nth-child(4){border-left-color:var(--navy)}
+
+  /* ---------- Jobs ---------- */
+  .jobs{background:linear-gradient(180deg,#FBF1E4,#FCF6EE)}
+  .job-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .job{
+    background:#fff;border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow-sm);
+    transition:.3s;position:relative;overflow:hidden;border:1px solid rgba(22,20,59,.04);
+  }
+  .job:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .job .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:18px;color:#fff}
+  .job .num{position:absolute;top:22px;right:26px;font-family:"Outfit";font-weight:800;font-size:40px;color:var(--cream-2)}
+  .job h4{font-size:19px;color:var(--navy);margin-bottom:10px;font-weight:800}
+  .job .role{font-size:12px;color:var(--red);font-weight:700;margin-bottom:12px;letter-spacing:.03em}
+  .job p{font-size:14px;color:#5a566f}
+
+  /* ---------- Numbers ---------- */
+  .numbers{background:var(--navy);color:#fff;overflow:hidden;position:relative}
+  .numbers::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(700px 400px at 85% 10%,rgba(232,155,60,.18),transparent 60%),
+    radial-gradient(600px 400px at 5% 90%,rgba(206,14,45,.22),transparent 60%);}
+  .numbers .sec-head h2,.numbers .sec-head p{color:#fff}
+  .numbers .sec-head .en-l{color:var(--gold)}
+  .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:1}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 20px;text-align:center;backdrop-filter:blur(4px)}
+  .stat .big{font-family:"Outfit";font-weight:800;font-size:clamp(34px,4vw,46px);line-height:1;color:#fff}
+  .stat .big .u{font-size:20px;color:var(--gold);margin-left:2px}
+  .stat .lb{font-size:13px;color:rgba(255,255,255,.8);margin-top:12px;font-weight:600}
+  .num-note{text-align:center;color:rgba(255,255,255,.55);font-size:12px;margin-top:26px;position:relative;z-index:1}
+
+  /* ---------- Culture ---------- */
+  .cul-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .cul{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);transition:.3s}
+  .cul:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .cul .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:23px;margin-bottom:16px;background:var(--cream-2)}
+  .cul h4{font-size:16.5px;color:var(--navy);margin-bottom:9px;font-weight:800}
+  .cul p{font-size:13.5px;color:#5a566f}
+  .event-strip{margin-top:30px;display:flex;flex-wrap:wrap;gap:11px;justify-content:center}
+  .event-strip span{background:#fff;border:1px solid var(--cream-2);color:var(--navy);font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:var(--shadow-sm)}
+  .event-strip span::before{content:"🌸 ";}
+
+  /* ---------- Interview ---------- */
+  .interview{background:linear-gradient(180deg,#FCF6EE,#FBF1E4)}
+  .iv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .iv{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.3s}
+  .iv:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .iv-top{padding:28px 26px 22px;background:linear-gradient(135deg,#fff,#FFF6E9);display:flex;align-items:center;gap:16px}
+  .iv-av{width:66px;height:66px;border-radius:50%;flex:none;overflow:hidden;box-shadow:0 6px 16px -8px rgba(22,20,59,.5)}
+  .iv-top .meta b{display:block;color:var(--navy);font-size:15px}
+  .iv-top .meta .r{font-size:12px;color:var(--red);font-weight:700;margin-top:2px}
+  .iv-top .meta .y{font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+  .iv-body{padding:0 26px 28px}
+  .iv-body .qt{font-family:"Shippori Mincho",serif;font-size:16px;color:var(--navy);line-height:1.6;margin:18px 0 12px}
+  .iv-body p{font-size:13.5px;color:#5a566f}
+
+  /* day timeline */
+  .day-box{margin-top:30px;background:#fff;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow-sm)}
+  .day-box h4{text-align:center;color:var(--navy);font-size:18px;margin-bottom:24px;font-weight:800}
+  .day-box h4 .en-l{display:block;font-family:"Outfit";color:var(--red);font-size:11px;letter-spacing:.2em;margin-bottom:4px}
+  .timeline{display:flex;gap:0;overflow-x:auto;padding-bottom:8px}
+  .tl{flex:1;min-width:120px;text-align:center;position:relative;padding-top:26px}
+  .tl::before{content:"";position:absolute;top:5px;left:50%;width:100%;height:2px;background:var(--cream-2)}
+  .tl:last-child::before{display:none}
+  .tl .dot{position:absolute;top:0;left:calc(50% - 6px);width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid #fff;box-shadow:0 0 0 3px var(--gold-soft)}
+  .tl .t{font-family:"Outfit";font-weight:700;color:var(--red);font-size:14px}
+  .tl .d{font-size:12px;color:#5a566f;margin-top:6px;padding:0 6px}
+
+  /* ---------- People wanted ---------- */
+  .people{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .people::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 90% 110%,rgba(232,155,60,.16),transparent 60%)}
+  .people .sec-head h2{color:#fff}.people .sec-head .en-l{color:var(--gold)}
+  .ppl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:1}
+  .ppl{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:26px;display:flex;gap:15px;align-items:flex-start}
+  .ppl .n{font-family:"Outfit";font-weight:800;color:var(--gold);font-size:22px;flex:none;line-height:1.2}
+  .ppl p{font-size:14.5px;color:#fff;font-weight:600;line-height:1.6}
+
+  /* ---------- Requirements ---------- */
+  .req-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:32px}
+  .req-tab{background:#fff;border:1.5px solid var(--cream-2);color:var(--ink-soft);font-weight:800;font-size:14px;padding:12px 30px;border-radius:999px;cursor:pointer;transition:.25s}
+  .req-tab.active{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 10px 22px -10px rgba(206,14,45,.7)}
+  .req-panel{display:none;max-width:840px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+  .req-panel.active{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .req-row{display:flex;border-bottom:1px solid #f2e9da}
+  .req-row:last-child{border-bottom:none}
+  .req-row .rk{width:170px;flex:none;background:var(--cream);padding:18px 24px;font-weight:800;color:var(--navy);font-size:13.5px}
+  .req-row .rv{padding:18px 24px;font-size:14px;color:#4a4660}
+  .req-row .rv b{color:var(--red)}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:linear-gradient(180deg,#FBF1E4,#FCF6EE)}
+  .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .qa{background:#fff;border-radius:16px;box-shadow:var(--shadow-sm);overflow:hidden}
+  .qa-q{display:flex;align-items:center;gap:14px;padding:20px 24px;cursor:pointer;font-weight:700;color:var(--navy);font-size:15px}
+  .qa-q .qmark{font-family:"Outfit";font-weight:800;color:var(--red);flex:none}
+  .qa-q .plus{margin-left:auto;flex:none;transition:.3s;color:var(--ink-soft);font-size:22px;line-height:1}
+  .qa.open .qa-q .plus{transform:rotate(45deg);color:var(--red)}
+  .qa-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .qa-a div{padding:0 24px 22px 56px;color:#5a566f;font-size:14px}
+
+  /* ---------- Entry CTA ---------- */
+  .entry{
+    background:linear-gradient(135deg,var(--red),var(--red-dk));color:#fff;text-align:center;
+    padding:90px 0;position:relative;overflow:hidden;
+  }
+  .entry::before{content:"";position:absolute;top:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .entry::after{content:"";position:absolute;bottom:-100px;right:-60px;width:320px;height:320px;border-radius:50%;background:rgba(0,0,0,.08)}
+  .entry-in{position:relative;z-index:1}
+  .entry .en-l{font-family:"Outfit";font-weight:800;letter-spacing:.28em;font-size:13px;color:var(--gold-soft);display:block;margin-bottom:14px}
+  .entry h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,4vw,42px);line-height:1.45;margin-bottom:18px}
+  .entry p{font-size:15px;color:rgba(255,255,255,.9);margin-bottom:34px;font-weight:500}
+  .btn-white{background:#fff;color:var(--red);font-size:16px;padding:17px 44px;box-shadow:0 16px 34px -12px rgba(0,0,0,.45)}
+  .btn-white:hover{transform:translateY(-3px)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:rgba(255,255,255,.7);padding:54px 0 30px}
+  .ft-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .ft-logo b{font-family:"Outfit";font-size:22px;color:#fff;font-weight:800}
+  .ft-logo p{font-size:12.5px;margin-top:8px;max-width:280px}
+  .ft-links{display:flex;gap:40px;flex-wrap:wrap}
+  .ft-col h5{color:#fff;font-size:12px;letter-spacing:.1em;margin-bottom:12px;font-family:"Outfit";font-weight:700}
+  .ft-col a{display:block;font-size:13px;margin-bottom:9px;transition:.2s}
+  .ft-col a:hover{color:var(--gold)}
+  .ft-bottom{padding-top:24px;font-size:11.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .ft-addr{font-size:12px}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:880px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-visual{order:-1}
+    .num-grid{grid-template-columns:repeat(2,1fr)}
+    .cul-grid,.iv-grid,.ppl-grid{grid-template-columns:1fr}
+    .job-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--cream);flex-direction:column;
+      padding:24px;gap:18px;box-shadow:var(--shadow);transform:translateY(-130%);transition:.35s;align-items:flex-start}
+    .nav-links.open{transform:none}
+    .nav-toggle{display:flex}
+    .nav-entry-desktop{display:none}
+    .msg-box,.day-box{padding:32px 22px}
+    .req-row{flex-direction:column}.req-row .rk{width:100%}
+    .timeline{flex-direction:row}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mark">L</span>
+      <span><b>LightCrew</b><span>ライトクルー株式会社</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#message">MESSAGE<span class="s">メッセージ</span></a>
+      <a href="#about">ABOUT<span class="s">会社を知る</span></a>
+      <a href="#jobs">WORK<span class="s">仕事を知る</span></a>
+      <a href="#numbers">NUMBERS<span class="s">数字</span></a>
+      <a href="#interview">VOICE<span class="s">社員の声</span></a>
+      <a href="#requirements">JOB<span class="s">募集要項</span></a>
+      <a href="#faq">FAQ<span class="s">質問</span></a>
+      <a href="https://lightcrew.co.jp/recruit/entry/" class="btn btn-entry" style="display:none" id="navEntryMobile">ENTRY</a>
+    </nav>
+    <a href="https://lightcrew.co.jp/recruit/entry/" class="btn btn-entry nav-entry-desktop">ENTRY <span class="ar">→</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <span class="eyebrow"><span class="dot"></span>浅草・雷門生まれのITソリューション企業</span>
+      <h1>君たちが動かすのは、<br>パソコンじゃない。<br><span class="hl">世界だ。</span></h1>
+      <p class="lead">技術と創造性を結集し、お客様に歓ばれるモノ創りへ。<br>仕事を楽しむチームで、あなたの「やってみたい」を形にしませんか。</p>
+      <div class="hero-cta">
+        <a href="https://lightcrew.co.jp/recruit/entry/" class="btn btn-entry">エントリーする <span class="ar">→</span></a>
+        <a href="#message" class="btn btn-ghost">まずは知る ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="lantern-card">
+        <div class="scene">
+          <!-- Asakusa lantern illustration -->
+          <svg viewBox="0 0 280 280" width="100%" height="100%" style="position:absolute;inset:0">
+            <defs>
+              <linearGradient id="lan" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E23"/><stop offset="1" stop-color="#A50B23"/>
+              </linearGradient>
+              <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+                <stop offset="0" stop-color="#F6D9A8" stop-opacity=".9"/><stop offset="1" stop-color="#F6D9A8" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="140" cy="120" r="110" fill="url(#glow)"/>
+            <!-- lantern -->
+            <rect x="118" y="32" width="44" height="9" rx="3" fill="#16143B"/>
+            <path d="M95 50 Q140 38 185 50 L182 175 Q140 188 98 175 Z" fill="url(#lan)"/>
+            <rect x="95" y="92" width="90" height="40" fill="#16143B" opacity=".92"/>
+            <text x="140" y="120" text-anchor="middle" fill="#F6D9A8" font-family="'Shippori Mincho',serif" font-weight="800" font-size="30">雷門</text>
+            <rect x="118" y="184" width="44" height="9" rx="3" fill="#16143B"/>
+            <line x1="106" y1="56" x2="100" y2="172" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
+            <line x1="174" y1="56" x2="180" y2="172" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
+          </svg>
+          <div class="float-chip" style="top:8px;left:-8px;animation-delay:.2s"><i style="background:#FFE8D2">🛠️</i>モノ創り</div>
+          <div class="float-chip" style="bottom:36px;right:-12px;animation-delay:1.1s"><i style="background:#E3ECFF">🌏</i>社会貢献</div>
+          <div class="float-chip" style="bottom:-6px;left:18px;animation-delay:.7s"><i style="background:#FBE3E8">💡</i>好奇心と感動</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MESSAGE ============ -->
+<section class="sec message" id="message">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">MESSAGE</span>
+      <h2>肩の力を抜いて、技術を楽しもう。</h2>
+    </div>
+    <div class="msg-box reveal">
+      <span class="q">“</span>
+      <h3>我々の組織は、仕事を楽しむチームである。<br>大企業にはない面白さが、ここにはある。</h3>
+      <p>2004年、浅草・雷門のそばで生まれた小さなITベンチャー。それがライトクルーの始まりです。私たちが大切にしているのは「技術による永遠の社会貢献」という想い。世の中への貢献はもちろん、<b>社員も社会の一員</b>。社会貢献という言葉には、"社員を幸せにする"という思いも込められています。</p>
+      <p>いま私たちは第二創業期。積み上げてきた信頼と経験を土台に、さらなる飛躍を目指しています。スキルだけでなく、人と組織の「品格」を大切にする──そんな仲間と一緒に、これからの未来へ突き進んでいきたい。あなたの挑戦を、心待ちにしています。</p>
+      <div class="msg-sign">
+        <span class="av"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#F6D9A8"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" fill="#F6D9A8"/></svg></span>
+        <div><b>取締役社長　久保田 真一</b><br><span>ライトクルー株式会社</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">ABOUT US</span>
+      <h2>ライトクルーって、どんな会社？</h2>
+      <p>「ITと伝統を、総合ソリューションで。」浅草の街に根を張るエンジニア集団です。</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-txt reveal">
+        <h3>下町の<em>あたたかさ</em>と、<br>最先端の<em>技術</em>が同居する会社。</h3>
+        <p>システム開発・インフラ構築から、官公庁システムや組み込み・制御開発まで、幅広い分野で設計・開発に携わってきました。培ってきた技術を活かし、日本の企業の99%を占める「中小・零細企業のIT化支援」にも挑戦しています。</p>
+        <p>キヤノンマーケティングジャパンやNECといった大手企業との取引を続けながら、自社製品の開発にも取り組む。"技術と品格のライトクルー"として、好奇心と感動を大切にするチームです。</p>
+      </div>
+      <div class="fact-cards reveal">
+        <div class="fact"><div class="k">設立</div><div class="v">2004年11月</div></div>
+        <div class="fact"><div class="k">本社</div><div class="v">東京・浅草<br>雷門ミハマビル</div></div>
+        <div class="fact"><div class="k">事業領域</div><div class="v">IT ソリューション<br>／ SES ／ IT化支援</div></div>
+        <div class="fact"><div class="k">主要取引先</div><div class="v">キヤノンMJ<br>NEC ほか</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOBS ============ -->
+<section class="sec jobs" id="jobs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">WORK</span>
+      <h2>どんな仕事ができるの？</h2>
+      <p>あなたの「やってみたい」に合わせて、4つのフィールドが広がっています。</p>
+    </div>
+    <div class="job-grid">
+      <div class="job reveal">
+        <span class="num">01</span>
+        <div class="ic" style="background:linear-gradient(135deg,#CE0E2D,#A50B23)">🧭</div>
+        <div class="role">APPLICATION SPECIALIST</div>
+        <h4>アプリケーションスペシャリスト</h4>
+        <p>お客様の業務システムを導入から運用・保守までコントロール。いわゆるITコンサルタントのように、技術と調整力で全体を動かすエンジニアです。</p>
+      </div>
+      <div class="job reveal">
+        <span class="num">02</span>
+        <div class="ic" style="background:linear-gradient(135deg,#1B3FA6,#16143B)">💻</div>
+        <div class="role">DEVELOPMENT ENGINEER</div>
+        <h4>開発エンジニア</h4>
+        <p>設計・コーディング・テストまで一貫して担当。アプリケーションやWebシステムを動かすプログラムを、上流から下流まで手がけるスペシャリストです。</p>
+      </div>
+      <div class="job reveal">
+        <span class="num">03</span>
+        <div class="ic" style="background:linear-gradient(135deg,#E89B3C,#C8761E)">🖧</div>
+        <div class="role">INFRASTRUCTURE ENGINEER</div>
+        <h4>インフラエンジニア</h4>
+        <p>システムを動かす基盤となるサーバ・ネットワークを設計・構築。妥当性や安全性の検証から運用テストまでをサポートする、土台づくりのプロです。</p>
+      </div>
+      <div class="job reveal">
+        <span class="num">04</span>
+        <div class="ic" style="background:linear-gradient(135deg,#2C9E6B,#1C7A4F)">🤝</div>
+        <div class="role">CONTRACT / IT SUPPORT</div>
+        <h4>請負業務・IT化支援</h4>
+        <p>個別システムの開発・運用・保守に加え、中小企業のIT化支援も。DB・ネットワークなど幅広い知識でマルチに対応する、頼れる存在です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="sec numbers" id="numbers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">NUMBERS</span>
+      <h2>数字で見るライトクルー</h2>
+      <p>働きやすさも、成長も。数字に表れています。</p>
+    </div>
+    <div class="num-grid">
+      <div class="stat reveal"><div class="big" data-count="91.1" data-dec="1">0<span class="u">%</span></div><div class="lb">昇給した人の割合</div></div>
+      <div class="stat reveal"><div class="big" data-count="18" data-dec="0">0<span class="u">h</span></div><div class="lb">平均残業時間／月</div></div>
+      <div class="stat reveal"><div class="big" data-count="58.8" data-dec="1">0<span class="u">%</span></div><div class="lb">有給休暇取得率</div></div>
+      <div class="stat reveal"><div class="big" data-count="36.4" data-dec="1">0<span class="u">歳</span></div><div class="lb">平均年齢</div></div>
+      <div class="stat reveal"><div class="big" data-count="117.1" data-dec="1">0<span class="u">%</span></div><div class="lb">売上 前年比（19期）</div></div>
+      <div class="stat reveal"><div class="big" data-count="54.1" data-dec="1">0<span class="u">%</span></div><div class="lb">理系出身（文系45.9%）</div></div>
+      <div class="stat reveal"><div class="big" data-count="14.3" data-dec="1">0<span class="u">%</span></div><div class="lb">3年以内離職率</div></div>
+      <div class="stat reveal"><div class="big" data-count="36" data-dec="0">0<span class="u">名</span></div><div class="lb">社員数</div></div>
+    </div>
+    <p class="num-note">※2024年1月時点の実績データに基づきます。</p>
+  </div>
+</section>
+
+<!-- ============ CULTURE ============ -->
+<section class="sec" id="culture">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">ENVIRONMENT</span>
+      <h2>安心して成長できる環境</h2>
+      <p>未経験からでも、一歩ずつ。学びと仲間が、いつもそばにあります。</p>
+    </div>
+    <div class="cul-grid">
+      <div class="cul reveal"><div class="ic">🌱</div><h4>新入社員教育</h4><p>2〜3ヶ月かけてプログラミングの基礎と社会人マナーを習得。外部研修でプロの講師から学べるので、未経験でも安心してスタートできます。</p></div>
+      <div class="cul reveal"><div class="ic">📚</div><h4>キャリア教育・勉強会</h4><p>日々進化するIT業界に対応するため、社内で勉強会を定期開催。先輩から学び、お互いに高め合う文化が根づいています。</p></div>
+      <div class="cul reveal"><div class="ic">🛡️</div><h4>セキュリティのプロ集団 (SAT)</h4><p>社内のセキュリティを担うSecurity Action Team を組織。2025年にはISMS（情報セキュリティ）認証も取得しました。</p></div>
+      <div class="cul reveal"><div class="ic">🚀</div><h4>社内プロジェクト推進</h4><p>「子どもの頃に思い描いた空想を実現したい」。そんな夢のあるプロジェクトを自ら企画・推進できる制度があります。</p></div>
+      <div class="cul reveal"><div class="ic">🎉</div><h4>盛んな社内交流</h4><p>心から信頼できる仲間がここに。社内行事が盛んで、お互いの人柄を知る機会がたくさんあります。</p></div>
+      <div class="cul reveal"><div class="ic">⏰</div><h4>残業少なめ・メリハリ</h4><p>平均残業は月18時間。カジュアル面談も歓迎しています。オン・オフのメリハリをつけて、長く働ける環境です。</p></div>
+    </div>
+    <div class="event-strip reveal">
+      <span>社員旅行</span><span>新年会</span><span>隅田川花火大会 社内観覧</span><span>走好会</span><span>山岳部</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERVIEW ============ -->
+<section class="sec interview" id="interview">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">MEMBER'S VOICE</span>
+      <h2>先輩社員の声</h2>
+      <p>ライトクルーで働くメンバーの、リアルな声をのぞいてみましょう。</p>
+    </div>
+    <div class="iv-grid">
+      <div class="iv reveal">
+        <div class="iv-top">
+          <div class="iv-av">
+            <svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#FFE8D2"/><circle cx="40" cy="32" r="15" fill="#16143B"/><path d="M14 76c0-15 12-24 26-24s26 9 26 24" fill="#CE0E2D"/></svg>
+          </div>
+          <div class="meta"><b>A さん</b><div class="r">フィールドSE</div><div class="y">入社4年目</div></div>
+        </div>
+        <div class="iv-body">
+          <div class="qt">お客様と一緒に「答え」を creating する面白さ。</div>
+          <p>サーバ構築から簡単なプログラムまで、幅広く担当しています。製品更改の設計をお客様と議論する時間が一番のやりがい。調整力もドキュメント力も、現場で鍛えられました。</p>
+        </div>
+      </div>
+      <div class="iv reveal">
+        <div class="iv-top">
+          <div class="iv-av">
+            <svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#E3ECFF"/><circle cx="40" cy="32" r="15" fill="#16143B"/><path d="M14 76c0-15 12-24 26-24s26 9 26 24" fill="#1B3FA6"/></svg>
+          </div>
+          <div class="meta"><b>N さん</b><div class="r">開発エンジニア</div><div class="y">入社3年目</div></div>
+        </div>
+        <div class="iv-body">
+          <div class="qt">作ったものが、ちゃんと動く。その瞬間が好き。</div>
+          <p>設計からコーディング、テストまで一貫して担当。レビューで先輩から丁寧にフィードバックをもらえるので、着実に力がついていく実感があります。集中できる開発環境も魅力です。</p>
+        </div>
+      </div>
+      <div class="iv reveal">
+        <div class="iv-top">
+          <div class="iv-av">
+            <svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#E6F6EC"/><circle cx="40" cy="32" r="15" fill="#16143B"/><path d="M14 76c0-15 12-24 26-24s26 9 26 24" fill="#2C9E6B"/></svg>
+          </div>
+          <div class="meta"><b>M さん</b><div class="r">インフラエンジニア</div><div class="y">入社6年目</div></div>
+        </div>
+        <div class="iv-body">
+          <div class="qt">"品格"を大切にする社風が、心地いい。</div>
+          <p>システムの土台を支える仕事。失敗しても他責にせず、自責で動ける人が多いから、相談しやすい雰囲気です。社内イベントも多くて、部署を超えた仲間ができました。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- A day -->
+    <div class="day-box reveal">
+      <h4><span class="en-l">A DAY</span>フィールドSE・A さんの1日</h4>
+      <div class="timeline">
+        <div class="tl"><span class="dot"></span><div class="t">8:30</div><div class="d">現場に到着</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">9:00</div><div class="d">朝礼・メールチェック</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">10:00</div><div class="d">定例会で製品更改の設計を議論</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">12:00</div><div class="d">近くのお店でランチ🍜</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">14:00</div><div class="d">課題の調査・検討</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">17:30</div><div class="d">終礼・1日の振り返り</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">17:45</div><div class="d">退社・おつかれさま！</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PEOPLE WANTED ============ -->
+<section class="sec people" id="people">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">WE WANT YOU</span>
+      <h2>こんな仲間を、待っています。</h2>
+    </div>
+    <div class="ppl-grid">
+      <div class="ppl reveal"><span class="n">01</span><p>明るく積極的で、思いやりのある方</p></div>
+      <div class="ppl reveal"><span class="n">02</span><p>人とのコミュニケーションを大切にする方</p></div>
+      <div class="ppl reveal"><span class="n">03</span><p>真面目で誠実に仕事へ取り組む方</p></div>
+      <div class="ppl reveal"><span class="n">04</span><p>既成概念にとらわれず、自由な発想ができる方</p></div>
+      <div class="ppl reveal"><span class="n">05</span><p>他責にせず、自責で動ける方</p></div>
+      <div class="ppl reveal"><span class="n">06</span><p>自分を成長させたいという想いのある方</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REQUIREMENTS ============ -->
+<section class="sec" id="requirements">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">REQUIREMENTS</span>
+      <h2>募集要項</h2>
+      <p>新卒・中途、どちらの採用も行っています。気になる方を選んでください。</p>
+    </div>
+    <div class="req-tabs reveal">
+      <button class="req-tab active" data-tab="shinsotsu">新卒採用</button>
+      <button class="req-tab" data-tab="chuto">中途採用</button>
+    </div>
+
+    <div class="req-panel active reveal" id="shinsotsu">
+      <div class="req-row"><div class="rk">募集職種</div><div class="rv">開発エンジニア／インフラエンジニア／アプリケーションスペシャリスト</div></div>
+      <div class="req-row"><div class="rk">対象</div><div class="rv">大学・大学院・専門学校 卒業（見込み）の方 ／ <b>未経験・文理不問</b></div></div>
+      <div class="req-row"><div class="rk">研修</div><div class="rv">入社後2〜3ヶ月の新入社員研修（プログラミング基礎＋ビジネスマナー、外部研修あり）</div></div>
+      <div class="req-row"><div class="rk">勤務地</div><div class="rv">東京都台東区雷門（本社）および各プロジェクト先</div></div>
+      <div class="req-row"><div class="rk">待遇・制度</div><div class="rv">昇給年1回／各種社会保険完備／資格取得支援／社内勉強会／社員旅行ほか社内イベント</div></div>
+      <div class="req-row"><div class="rk">選考フロー</div><div class="rv">エントリー → 会社説明会／カジュアル面談 → 面接 → 内定</div></div>
+    </div>
+
+    <div class="req-panel reveal" id="chuto">
+      <div class="req-row"><div class="rk">募集職種</div><div class="rv">開発エンジニア／インフラエンジニア</div></div>
+      <div class="req-row"><div class="rk">想定年収</div><div class="rv"><b>450万円 〜 700万円</b>（経験・スキルを考慮の上、決定）</div></div>
+      <div class="req-row"><div class="rk">求める経験</div><div class="rv">開発：C／C++／Java での開発経験／インフラ：サーバ・ネットワーク構築や運用保守の経験</div></div>
+      <div class="req-row"><div class="rk">勤務地</div><div class="rv">東京都・神奈川県（本社および各プロジェクト先）</div></div>
+      <div class="req-row"><div class="rk">特徴</div><div class="rv"><b>カジュアル面談歓迎</b>／残業少なめ／自社サービス製品あり</div></div>
+      <div class="req-row"><div class="rk">選考フロー</div><div class="rv">エントリー（またはカジュアル面談）→ 面接 → 内定</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="qa reveal"><div class="qa-q"><span class="qmark">Q.</span>未経験でも応募できますか？<span class="plus">+</span></div><div class="qa-a"><div>はい、大歓迎です。新卒採用は文理不問・未経験OK。入社後2〜3ヶ月の研修でプログラミングの基礎から学べるので、安心してチャレンジしてください。</div></div></div>
+      <div class="qa reveal"><div class="qa-q"><span class="qmark">Q.</span>研修制度について教えてください。<span class="plus">+</span></div><div class="qa-a"><div>新入社員研修では、外部研修でプロの講師からプログラミング基礎とビジネスマナーを学びます。入社後も社内勉強会やキャリア教育を継続的に実施しています。</div></div></div>
+      <div class="qa reveal"><div class="qa-q"><span class="qmark">Q.</span>残業は多いですか？<span class="plus">+</span></div><div class="qa-a"><div>平均残業時間は月18時間ほど。有給休暇取得率も58.8%と、メリハリをつけて働ける環境です。</div></div></div>
+      <div class="qa reveal"><div class="qa-q"><span class="qmark">Q.</span>勤務地はどこになりますか？<span class="plus">+</span></div><div class="qa-a"><div>本社は東京・浅草の雷門。プロジェクトにより、東京都・神奈川県内のお客様先に常駐して業務を行う場合があります。</div></div></div>
+      <div class="qa reveal"><div class="qa-q"><span class="qmark">Q.</span>まずは話を聞くだけでも大丈夫ですか？<span class="plus">+</span></div><div class="qa-a"><div>もちろんです。カジュアル面談を歓迎しています。応募前に会社の雰囲気を知りたい方も、お気軽にエントリーしてください。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTRY ============ -->
+<section class="entry" id="entry">
+  <div class="wrap entry-in">
+    <span class="en-l">ENTRY</span>
+    <h2>ライトクルーで、<br>一緒に働きませんか？</h2>
+    <p>あなたの「やってみたい」を、技術で世界へ。まずは一歩、踏み出してみてください。</p>
+    <a href="https://lightcrew.co.jp/recruit/entry/" class="btn btn-white">エントリーする →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-logo">
+        <b>LightCrew</b>
+        <p>ライトクルー株式会社｜技術による永遠の社会貢献。ITと伝統を総合ソリューション。</p>
+      </div>
+      <div class="ft-links">
+        <div class="ft-col">
+          <h5>RECRUIT</h5>
+          <a href="#message">メッセージ</a>
+          <a href="#jobs">仕事を知る</a>
+          <a href="#numbers">数字で見る</a>
+          <a href="#requirements">募集要項</a>
+        </div>
+        <div class="ft-col">
+          <h5>COMPANY</h5>
+          <a href="https://lightcrew.co.jp/" target="_blank" rel="noopener">会社ホームページ</a>
+          <a href="https://lightcrew.co.jp/?company=profile" target="_blank" rel="noopener">会社概要</a>
+          <a href="https://lightcrew.co.jp/?company=philosophy" target="_blank" rel="noopener">企業理念</a>
+          <a href="https://lightcrew.co.jp/recruit/entry/" target="_blank" rel="noopener">エントリー</a>
+        </div>
+      </div>
+    </div>
+    <p class="ft-addr">本社：〒111-0034 東京都台東区雷門2-6-1 雷門ミハマビル8階</p>
+    <div class="ft-bottom">
+      <span>© LightCrew Co., Ltd. All Rights Reserved.</span>
+      <span>技術による永遠の社会貢献</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks'),navE=document.getElementById('navEntryMobile');
+  toggle.addEventListener('click',()=>{links.classList.toggle('open');navE.style.display=links.classList.contains('open')?'inline-flex':'none';});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');navE.style.display='none';}));
+
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // count up
+  const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(!e.isIntersecting)return; const el=e.target; cio.unobserve(el);
+    const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec),u=el.querySelector('.u');
+    let cur=0,steps=46,inc=target/steps,n=0;
+    const t=setInterval(()=>{cur+=inc;n++;if(n>=steps){cur=target;clearInterval(t);}
+      el.firstChild.nodeValue=cur.toFixed(dec);},20);
+  });},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+  // requirements tabs
+  document.querySelectorAll('.req-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.req-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.req-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // faq accordion
+  document.querySelectorAll('.qa-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const qa=q.parentElement,a=qa.querySelector('.qa-a'),open=qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.qa-a').style.maxHeight=null;});
+      if(!open){qa.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  // header shadow on scroll
+  addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=scrollY>10?'0 6px 24px -16px rgba(22,20,59,.5)':'none';});
+</script>
+</body>
+</html>
