@@ -217,12 +217,17 @@
   .cul-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .cul{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);transition:.3s}
   .cul:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-  .cul .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:23px;margin-bottom:16px;background:var(--cream-2)}
+  .cul .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px;background:var(--cream-2);color:var(--navy)}
+  .cul .ic svg{width:25px;height:25px}
+  .job .ic svg{width:29px;height:29px}
+  .float-chip i svg{width:17px;height:17px}
+  .prj-cat{display:inline-flex;align-items:center;gap:5px}
+  .prj-cat svg{width:13px;height:13px}
   .cul h4{font-size:16.5px;color:var(--navy);margin-bottom:9px;font-weight:800}
   .cul p{font-size:13.5px;color:#5a566f}
   .event-strip{margin-top:30px;display:flex;flex-wrap:wrap;gap:11px;justify-content:center}
   .event-strip span{background:#fff;border:1px solid var(--cream-2);color:var(--navy);font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:var(--shadow-sm)}
-  .event-strip span::before{content:"🌸 ";}
+  .event-strip span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:middle}
 
   /* ---------- Interview ---------- */
   .interview{background:linear-gradient(180deg,#FCF6EE,#FBF1E4)}
@@ -391,9 +396,9 @@
             <line x1="106" y1="56" x2="100" y2="172" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
             <line x1="174" y1="56" x2="180" y2="172" stroke="#fff" stroke-opacity=".25" stroke-width="2"/>
           </svg>
-          <div class="float-chip" style="top:8px;left:-8px;animation-delay:.2s"><i style="background:#FFE8D2">🛠️</i>モノ創り</div>
-          <div class="float-chip" style="bottom:36px;right:-12px;animation-delay:1.1s"><i style="background:#E3ECFF">🌏</i>社会貢献</div>
-          <div class="float-chip" style="bottom:-6px;left:18px;animation-delay:.7s"><i style="background:#FBE3E8">💡</i>好奇心と感動</div>
+          <div class="float-chip" style="top:8px;left:-8px;animation-delay:.2s"><i style="background:#FFE8D2;color:#C8761E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a3.5 3.5 0 0 0-4.8 4.6l-5.4 5.4a1.9 1.9 0 0 0 2.7 2.7l5.4-5.4a3.5 3.5 0 0 0 4.6-4.8l-2.4 2.4-2-.5-.5-2z"/></svg></i>モノ創り</div>
+          <div class="float-chip" style="bottom:36px;right:-12px;animation-delay:1.1s"><i style="background:#E3ECFF;color:#1B3FA6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></i>社会貢献</div>
+          <div class="float-chip" style="bottom:-6px;left:18px;animation-delay:.7s"><i style="background:#FBE3E8;color:#CE0E2D"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"/></svg></i>好奇心と感動</div>
         </div>
       </div>
     </div>
@@ -455,28 +460,28 @@
     <div class="job-grid">
       <div class="job reveal">
         <span class="num">01</span>
-        <div class="ic" style="background:linear-gradient(135deg,#CE0E2D,#A50B23)">🧭</div>
+        <div class="ic" style="background:linear-gradient(135deg,#CE0E2D,#A50B23)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="15.6 8.4 10.5 10.5 8.4 15.6 13.5 13.5"/></svg></div>
         <div class="role">APPLICATION SPECIALIST</div>
         <h4>アプリケーションスペシャリスト</h4>
         <p>お客様の業務システムを導入から運用・保守までコントロール。いわゆるITコンサルタントのように、技術と調整力で全体を動かすエンジニアです。</p>
       </div>
       <div class="job reveal">
         <span class="num">02</span>
-        <div class="ic" style="background:linear-gradient(135deg,#1B3FA6,#16143B)">💻</div>
+        <div class="ic" style="background:linear-gradient(135deg,#1B3FA6,#16143B)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="13.5" y1="5" x2="10.5" y2="19"/></svg></div>
         <div class="role">DEVELOPMENT ENGINEER</div>
         <h4>開発エンジニア</h4>
         <p>設計・コーディング・テストまで一貫して担当。アプリケーションやWebシステムを動かすプログラムを、上流から下流まで手がけるスペシャリストです。</p>
       </div>
       <div class="job reveal">
         <span class="num">03</span>
-        <div class="ic" style="background:linear-gradient(135deg,#E89B3C,#C8761E)">🖧</div>
+        <div class="ic" style="background:linear-gradient(135deg,#E89B3C,#C8761E)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><line x1="6.5" y1="7" x2="6.5" y2="7"/><line x1="6.5" y1="17" x2="6.5" y2="17"/></svg></div>
         <div class="role">INFRASTRUCTURE ENGINEER</div>
         <h4>インフラエンジニア</h4>
         <p>システムを動かす基盤となるサーバ・ネットワークを設計・構築。妥当性や安全性の検証から運用テストまでをサポートする、土台づくりのプロです。</p>
       </div>
       <div class="job reveal">
         <span class="num">04</span>
-        <div class="ic" style="background:linear-gradient(135deg,#2C9E6B,#1C7A4F)">🤝</div>
+        <div class="ic" style="background:linear-gradient(135deg,#2C9E6B,#1C7A4F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div>
         <div class="role">CONTRACT / IT SUPPORT</div>
         <h4>請負業務・IT化支援</h4>
         <p>個別システムの開発・運用・保守に加え、中小企業のIT化支援も。DB・ネットワークなど幅広い知識でマルチに対応する、頼れる存在です。</p>
@@ -496,7 +501,7 @@
     <div class="prj-grid">
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">🏛 官公庁</span><h4>官公庁のシステム運用・保守</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><path d="M5 21V9.5M9 21V9.5M15 21V9.5M19 21V9.5"/><path d="M12 3 20 8H4z"/></svg>官公庁</span><h4>官公庁のシステム運用・保守</h4></div>
         <div class="prj-tags">
           <span class="t lang">シェルスクリプト</span><span class="t lang">バッチ</span>
           <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
@@ -508,7 +513,7 @@
       </article>
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">🏛 官公庁</span><h4>官公庁のシステム開発</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="21" x2="21" y2="21"/><path d="M5 21V9.5M9 21V9.5M15 21V9.5M19 21V9.5"/><path d="M12 3 20 8H4z"/></svg>官公庁</span><h4>官公庁のシステム開発</h4></div>
         <div class="prj-tags">
           <span class="t lang">Java</span><span class="t lang">シェルスクリプト</span>
           <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
@@ -520,7 +525,7 @@
       </article>
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">📄 製品保守</span><h4>ドキュメントシステム製品の保守窓口</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>製品保守</span><h4>ドキュメントシステム製品の保守窓口</h4></div>
         <div class="prj-tags">
           <span class="t lang">バッチ</span><span class="t lang">スクリプト</span>
           <span class="t env">Windows</span>
@@ -532,7 +537,7 @@
       </article>
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">📄 製品保守</span><h4>ドキュメントシステム製品の導入・保守</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>製品保守</span><h4>ドキュメントシステム製品の導入・保守</h4></div>
         <div class="prj-tags">
           <span class="t lang">バッチ</span><span class="t lang">スクリプト</span>
           <span class="t env">Windows</span>
@@ -544,7 +549,7 @@
       </article>
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">🏦 金融</span><h4>金融系のシステム開発</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 8.5 12 12.5 15 8.5"/><line x1="12" y1="12.5" x2="12" y2="16"/><line x1="9.7" y1="13.2" x2="14.3" y2="13.2"/></svg>金融</span><h4>金融系のシステム開発</h4></div>
         <div class="prj-tags">
           <span class="t lang">Java</span><span class="t lang">C#</span>
           <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
@@ -556,7 +561,7 @@
       </article>
 
       <article class="prj reveal">
-        <div class="prj-top"><span class="prj-cat">🔬 製造・組込</span><h4>半導体検査装置のシステム開発</h4></div>
+        <div class="prj-top"><span class="prj-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M10 3v3M14 3v3M10 18v3M14 18v3M3 10h3M3 14h3M18 10h3M18 14h3"/></svg>製造・組込</span><h4>半導体検査装置のシステム開発</h4></div>
         <div class="prj-tags">
           <span class="t lang">C++</span>
           <span class="t env">Windows</span>
@@ -602,12 +607,12 @@
       <p>未経験からでも、一歩ずつ。学びと仲間が、いつもそばにあります。</p>
     </div>
     <div class="cul-grid">
-      <div class="cul reveal"><div class="ic">🌱</div><h4>新入社員教育</h4><p>2〜3ヶ月かけてプログラミングの基礎と社会人マナーを習得。外部研修でプロの講師から学べるので、未経験でも安心してスタートできます。</p></div>
-      <div class="cul reveal"><div class="ic">📚</div><h4>キャリア教育・勉強会</h4><p>日々進化するIT業界に対応するため、社内で勉強会を定期開催。先輩から学び、お互いに高め合う文化が根づいています。</p></div>
-      <div class="cul reveal"><div class="ic">🛡️</div><h4>セキュリティのプロ集団 (SAT)</h4><p>社内のセキュリティを担うSecurity Action Team を組織。2025年にはISMS（情報セキュリティ）認証も取得しました。</p></div>
-      <div class="cul reveal"><div class="ic">🚀</div><h4>社内プロジェクト推進</h4><p>「子どもの頃に思い描いた空想を実現したい」。そんな夢のあるプロジェクトを自ら企画・推進できる制度があります。</p></div>
-      <div class="cul reveal"><div class="ic">🎉</div><h4>盛んな社内交流</h4><p>心から信頼できる仲間がここに。社内行事が盛んで、お互いの人柄を知る機会がたくさんあります。</p></div>
-      <div class="cul reveal"><div class="ic">⏰</div><h4>残業少なめ・メリハリ</h4><p>平均残業は月18時間。カジュアル面談も歓迎しています。オン・オフのメリハリをつけて、長く働ける環境です。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/><line x1="22" y1="10" x2="22" y2="15"/></svg></div><h4>新入社員教育</h4><p>2〜3ヶ月かけてプログラミングの基礎と社会人マナーを習得。外部研修でプロの講師から学べるので、未経験でも安心してスタートできます。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h4>キャリア教育・勉強会</h4><p>日々進化するIT業界に対応するため、社内で勉強会を定期開催。先輩から学び、お互いに高め合う文化が根づいています。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 11.5 11 13.5 15 9"/></svg></div><h4>セキュリティのプロ集団 (SAT)</h4><p>社内のセキュリティを担うSecurity Action Team を組織。2025年にはISMS（情報セキュリティ）認証も取得しました。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></div><h4>社内プロジェクト推進</h4><p>「子どもの頃に思い描いた空想を実現したい」。そんな夢のあるプロジェクトを自ら企画・推進できる制度があります。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>盛んな社内交流</h4><p>心から信頼できる仲間がここに。社内行事が盛んで、お互いの人柄を知る機会がたくさんあります。</p></div>
+      <div class="cul reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div><h4>残業少なめ・メリハリ</h4><p>平均残業は月18時間。カジュアル面談も歓迎しています。オン・オフのメリハリをつけて、長く働ける環境です。</p></div>
     </div>
     <div class="event-strip reveal">
       <span>社員旅行</span><span>新年会</span><span>隅田川花火大会 社内観覧</span><span>走好会</span><span>山岳部</span>
@@ -669,7 +674,7 @@
         <div class="tl"><span class="dot"></span><div class="t">8:30</div><div class="d">現場に到着</div></div>
         <div class="tl"><span class="dot"></span><div class="t">9:00</div><div class="d">朝礼・メールチェック</div></div>
         <div class="tl"><span class="dot"></span><div class="t">10:00</div><div class="d">定例会で製品更改の設計を議論</div></div>
-        <div class="tl"><span class="dot"></span><div class="t">12:00</div><div class="d">近くのお店でランチ🍜</div></div>
+        <div class="tl"><span class="dot"></span><div class="t">12:00</div><div class="d">近くのお店でランチ</div></div>
         <div class="tl"><span class="dot"></span><div class="t">14:00</div><div class="d">課題の調査・検討</div></div>
         <div class="tl"><span class="dot"></span><div class="t">17:30</div><div class="d">終礼・1日の振り返り</div></div>
         <div class="tl"><span class="dot"></span><div class="t">17:45</div><div class="d">退社・おつかれさま！</div></div>
