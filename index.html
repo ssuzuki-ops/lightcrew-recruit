@@ -56,7 +56,7 @@
   }
   .logo b{font-size:21px;font-family:"Outfit";color:var(--navy);letter-spacing:.02em}
   .logo span{display:block;font-size:10px;color:var(--ink-soft);font-weight:500;letter-spacing:.18em;margin-top:-3px}
-  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links{display:flex;align-items:center;gap:19px}
   .nav-links a{font-size:13px;font-weight:700;color:var(--navy);transition:.2s;position:relative}
   .nav-links a .s{display:block;font-size:9px;color:var(--red);font-family:"Outfit";font-weight:700;letter-spacing:.12em}
   .nav-links a:hover{color:var(--red)}
@@ -173,6 +173,31 @@
   .job h4{font-size:19px;color:var(--navy);margin-bottom:10px;font-weight:800}
   .job .role{font-size:12px;color:var(--red);font-weight:700;margin-bottom:12px;letter-spacing:.03em}
   .job p{font-size:14px;color:#5a566f}
+
+  /* ---------- Projects / 案件事例 ---------- */
+  .projects{background:linear-gradient(180deg,#FFFBF5,#FCF6EE)}
+  .prj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .prj{background:#fff;border-radius:var(--radius);padding:28px 28px 26px;box-shadow:var(--shadow-sm);
+    transition:.3s;border:1px solid rgba(22,20,59,.05);display:flex;flex-direction:column}
+  .prj:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .prj-top{display:flex;align-items:center;gap:11px;margin-bottom:15px}
+  .prj-cat{flex:none;font-size:11.5px;font-weight:800;color:var(--red);background:#FBE3E8;
+    padding:5px 11px;border-radius:8px;letter-spacing:.02em}
+  .prj-top h4{font-size:17px;color:var(--navy);font-weight:800;line-height:1.4}
+  .prj-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+  .prj-tags .t{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:7px}
+  .prj-tags .t.lang{background:#EAF0FF;color:#1B3FA6}
+  .prj-tags .t.env{background:#FBEEE0;color:#C8761E}
+  .prj .lab{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--navy);
+    letter-spacing:.04em;margin-bottom:9px}
+  .prj .lab::before{content:"";width:14px;height:3px;border-radius:2px;background:var(--gold)}
+  .prj-appeal{background:var(--cream);border-radius:14px;padding:16px 18px;margin-bottom:16px}
+  .prj-appeal .lab::before{background:var(--red)}
+  .prj-appeal p{font-size:13.5px;color:#4a4660;line-height:1.8}
+  .prj-skills{margin-top:auto}
+  .prj-skills .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .prj-skills .chips span{background:var(--cream-2);color:var(--navy);font-size:11px;font-weight:600;
+    padding:4px 11px;border-radius:999px}
 
   /* ---------- Numbers ---------- */
   .numbers{background:var(--navy);color:#fff;overflow:hidden;position:relative}
@@ -294,7 +319,7 @@
     .hero-visual{order:-1}
     .num-grid{grid-template-columns:repeat(2,1fr)}
     .cul-grid,.iv-grid,.ppl-grid{grid-template-columns:1fr}
-    .job-grid{grid-template-columns:1fr}
+    .job-grid,.prj-grid{grid-template-columns:1fr}
     .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--cream);flex-direction:column;
       padding:24px;gap:18px;box-shadow:var(--shadow);transform:translateY(-130%);transition:.35s;align-items:flex-start}
     .nav-links.open{transform:none}
@@ -319,6 +344,7 @@
       <a href="#message">MESSAGE<span class="s">メッセージ</span></a>
       <a href="#about">ABOUT<span class="s">会社を知る</span></a>
       <a href="#jobs">WORK<span class="s">仕事を知る</span></a>
+      <a href="#projects">PROJECTS<span class="s">案件事例</span></a>
       <a href="#numbers">NUMBERS<span class="s">数字</span></a>
       <a href="#interview">VOICE<span class="s">社員の声</span></a>
       <a href="#requirements">JOB<span class="s">募集要項</span></a>
@@ -455,6 +481,92 @@
         <h4>請負業務・IT化支援</h4>
         <p>個別システムの開発・運用・保守に加え、中小企業のIT化支援も。DB・ネットワークなど幅広い知識でマルチに対応する、頼れる存在です。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS / 案件事例 ============ -->
+<section class="sec projects" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="en-l">PROJECTS</span>
+      <h2>こんな案件に、携わります。</h2>
+      <p>官公庁から金融、製造まで。大手の1次請け案件で、社会を支えるシステムづくりに挑めます。</p>
+    </div>
+    <div class="prj-grid">
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">🏛 官公庁</span><h4>官公庁のシステム運用・保守</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">シェルスクリプト</span><span class="t lang">バッチ</span>
+          <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>社会的責任の大きい大規模システム。大企業1次請け案件で、進め方や考え方を学び実践できます。約10名のチームで動き、PLなど幅広い業務を任せてもらえる環境。3年ごとの大規模更改で常に案件が動いています。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>クラウド領域の知識</span><span>AI活用</span><span>顧客折衝</span><span>DB知識</span><span>運用設計</span><span>監視・障害対応</span><span>リリース対応</span></div></div>
+      </article>
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">🏛 官公庁</span><h4>官公庁のシステム開発</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">Java</span><span class="t lang">シェルスクリプト</span>
+          <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>多くの人の生活を支える仕事。高い品質が求められる環境で技術者として成長でき、社会に残る仕組みを作る達成感があります。将来のPM・リーダーにつながる経験が積めます。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>クラウド領域の知識</span><span>DB知識</span><span>リスク管理</span><span>品質管理</span><span>性能設計・負荷試験</span><span>システム移行計画</span><span>大規模案件のキャリア価値</span></div></div>
+      </article>
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">📄 製品保守</span><h4>ドキュメントシステム製品の保守窓口</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">バッチ</span><span class="t lang">スクリプト</span>
+          <span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>大手顧客と直接やり取りする、SE対応レベルの窓口業務（コールセンターではありません）。コミュニケーション力に加え、ドキュメント系システムの業務スキルや運用・保守の理解が深まります。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>窓口・顧客対応</span><span>システム障害対応</span><span>サーバOSの知識</span><span>ミドルウェア(DB/Web)</span><span>文書作成・論理的思考</span></div></div>
+      </article>
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">📄 製品保守</span><h4>ドキュメントシステム製品の導入・保守</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">バッチ</span><span class="t lang">スクリプト</span>
+          <span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>大手顧客と直接やり取りし、コミュニケーション力が身につきます。ドキュメント系システムの業務スキルが身につき、システム運用・保守への理解が深まる案件です。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>顧客折衝</span><span>システム障害対応</span><span>サーバOS・ミドルウェア</span><span>リスク管理</span><span>品質管理</span><span>性能設計・負荷試験</span><span>システム移行計画</span></div></div>
+      </article>
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">🏦 金融</span><h4>金融系のシステム開発</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">Java</span><span class="t lang">C#</span>
+          <span class="t env">AWS</span><span class="t env">Linux</span><span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>高い品質が求められる環境で技術者として成長でき、将来のPM・リーダーにつながる経験が積めます。複数の開発プロジェクトがあるため、案件終了後も別の案件にアサインしてもらえる安心感があります。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>クラウド領域の知識</span><span>顧客折衝</span><span>DB知識</span><span>リスク管理</span><span>品質管理</span><span>性能設計・負荷試験</span><span>大規模案件のキャリア価値</span></div></div>
+      </article>
+
+      <article class="prj reveal">
+        <div class="prj-top"><span class="prj-cat">🔬 製造・組込</span><h4>半導体検査装置のシステム開発</h4></div>
+        <div class="prj-tags">
+          <span class="t lang">C++</span>
+          <span class="t env">Windows</span>
+        </div>
+        <div class="prj-appeal"><div class="lab">魅力・やりがい</div>
+          <p>高い品質が求められる環境で技術者として成長できます。検査装置システムの改修が常に発生しているため、腰を据えて長く案件に携われるのが魅力です。</p></div>
+        <div class="prj-skills"><div class="lab">身につくスキル</div>
+          <div class="chips"><span>組み込み系開発の知識</span><span>リスク管理</span><span>品質管理</span><span>文書作成・論理的思考</span></div></div>
+      </article>
+
     </div>
   </div>
 </section>
